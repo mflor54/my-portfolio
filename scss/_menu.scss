@@ -41,7 +41,7 @@
   top: 0;
   width: 100%;
   visibility: hidden;
-  opacity: 0.9;
+  opacity: 0.95;
 
   &.show {
     visibility: visible;
@@ -62,6 +62,7 @@
   &-nav {
     margin: 0;
     padding: 0;
+    padding-left: 10%;
     background: darken($primary-color, 7);
     transform: translate3d(0, -100%, 0);
     @include ease-out;
@@ -81,6 +82,7 @@
     @include ease-out;
     &.show {
       transform: translate3d(0, 0, 0);
+      padding-left: 15%;
     }
 
     .portrait {

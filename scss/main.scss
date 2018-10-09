@@ -6,13 +6,13 @@
 }
 
 body {
-  background: $primary-color;
+  @include background();
+  background: #ecf0f1;
   color: set-text-color($primary-color);
   height: 100%;
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
-  @include background();
 }
 
 // Headings
@@ -81,6 +81,10 @@ main {
     "bio-image bio bio"
     "job-1 job-2 job-3";
   grid-template-columns: repeat(3, 1fr);
+
+  img {
+    padding-left: 1.5rem;
+  }
 }
 
 .bio-image {
@@ -107,7 +111,10 @@ main {
 .job {
   background: lighten($primary-color, 5);
   padding: 0.5rem;
-  border-bottom: $secondary-color solid 5px;
+  // border-bottom: $secondary-color solid 5px;
+  box-shadow: 4px 4px 1px $secondary-color;
+  margin-right: 15px;
+  margin-bottom: 15px;
 }
 
 // projects
@@ -116,6 +123,13 @@ main {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 0.7rem;
+
+  a {
+    &:hover {
+      @include ease-out;
+    }
+  }
+
   img {
     width: 100%;
     border: white 3px solid;
@@ -123,6 +137,12 @@ main {
       opacity: 0.8;
       border-color: $secondary-color;
       @include ease-out;
+    }
+  }
+  .item {
+    .before-info {
+      font-weight: 600;
+      font-size: 1.1rem;
     }
   }
 }
@@ -142,6 +162,10 @@ main {
     padding: 1.5rem 2.5rem;
     margin-bottom: 3rem;
     @include ease-out;
+    
+    a {
+      color: #000;
+    }
 
     &:hover {
       background-color: $secondary-color;

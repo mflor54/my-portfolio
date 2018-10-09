@@ -2,6 +2,10 @@
 @include mediaXL {
   .projects {
     grid-template-columns: repeat(3, 1fr);
+
+    .item img {
+      height: 250px;
+    }
   }
 }
 
@@ -9,6 +13,10 @@
 @include mediaLg {
   .projects {
     grid-template-columns: repeat(3, 1fr);
+
+    .item img {
+      height: 175px;
+    }
   }
 }
 
@@ -85,5 +93,14 @@
 
   .projects {
     grid-template-columns: 1fr;
+
+    .item {
+      margin-bottom: 15px;
+
+      img {
+        height: 200px;
+        width: 300px;
+      }
+    }
   }
 }
